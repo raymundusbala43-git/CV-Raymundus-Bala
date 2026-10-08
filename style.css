@@ -1,0 +1,225 @@
+* {
+	box-sizing: border-box;
+}
+
+
+
+/*===========body ===========*/
+body{
+	background-color:cadetblue;
+	font-family: arial, sans-serif;
+	color:#000000;
+	margin: 0;
+	padding:30px;
+}
+
+/*===========container ===========*/
+.container {
+	width: 80%;
+	margin: auto;
+	padding: 35px;
+	background-color:white;
+}
+h1 {
+	color :darkblue;
+	text-align: center;
+	margin-bottom: 20px;
+}
+h2 {
+	color:darkblue;
+	margin-top: 30px;
+	margin-bottom: 15px;
+}
+p {
+	font-size: 16px;
+	line-height: 1.7;
+	text-align:justify;
+}
+
+/*===========identitas ===========*/
+.identitas {
+	width: 60%;
+}
+
+/*===========kolom foto ===========*/
+.kolom-foto {
+	vertical-align: top;
+	padding-right: 30px;
+}
+
+/*===========kolom identitas ===========*/
+.kolom-identitas {
+	vertical-align: top;
+}
+
+/*===========foto profil ===========*/
+.foto-profil {
+	width: 201px;
+	border: 3px solid white;
+	padding: 5px;
+}
+
+/*===========data identitas ===========*/
+.Data-identitas td {
+	padding: 5px ;
+}
+
+/*===========tabel-mata kuliah ===========*/
+.tabel-matakuliah {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+.tabel-matakuliah th {
+	background-color:  #00509e;
+	color: white;
+	padding: 10px;
+	border: 1px solid #cccccc;
+}
+.tabel-matakuliah td {
+	padding: 10px;
+	border: 1px solid #cccccc;
+}
+
+a {
+	color : #0066cc;
+	text-decoration: none;
+}
+a:hover {
+	color : red;
+	text-decoration: underline;
+}
+form {
+	background-color: #f1f5f9;
+	padding: 20px;
+	margin-top: 20px;
+
+	border: 1px solid #cccccc;
+}
+label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+input,
+select,
+textarea {
+	width: 100%;
+	padding:10px;
+	border: 1px solid #cccccc;
+	box-sizing: border-box;
+}
+textarea {
+	resize: vertical;
+}
+button {
+	background-color: #00509e;
+	color: white;
+	padding: 10px 20px;
+	border:none;
+	margin-right: 10px;
+	cursor : pointer;
+}
+button:hover {
+	background-color: #003366;
+}
+
+/*===========footer ===========*/
+.footer {
+	text-align: center;
+	color: #666666;
+	margin-top: 30px;
+}
+
+/*===========grid-informasi ===========*/
+.grid-informasi {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+/*===========card ===========*/
+.card {
+	background-color: cadetblue;
+	padding: 20px;
+	border: 1px solid #dddddd;
+}
+
+
+
+/*==========responsife tablet dan hp*/
+@media (max-width: 768px)
+{
+	/*CONTAINER*/
+	.container {
+		width: 94P%;
+		margin: 10PX auto;
+		padding: 15PX;
+	}
+
+	/*HEADING*/
+	h1 {font-size: 24px;}
+	h2 {font-size: 19px;}
+	p {font-size: 14px;line-height: 1.6;}
+
+	/*FOTO DAN IDENTITAS*/
+	.identitas >tbody > tr {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.kolom-foto{
+		width: 100%;
+		padding-right: 0;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	.kolom-identitas{
+		width: 100%;
+		padding-right: 0;
+	}
+
+	.kolom-identitas h2{
+		margin-top: 0;
+		text-align: center;
+	}
+
+	.foto-profil {
+		width: 130px;
+	}
+
+	/*DATA IDENTITAS*/
+	.data-identitas td{
+		padding: 4px 2px;
+		font-size: 13px;
+		vertical-align: top;
+	}
+
+	/*grid informasi*/
+	.grid-informasi {
+		grid-template-columns: 1fr;
+		gap: 15px;
+	}
+
+	.card {
+		width: 100%;
+		padding: 15px;
+	}
+
+	.tabel-matakuliah {font-size: 12px;}
+	form {padding: 15px;}
+
+	input,
+	select,
+	textarea {font-size: 14px;}	
+
+	button {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+}
