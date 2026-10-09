@@ -1,13 +1,11 @@
 
+/* ========== PENGATURAN DASAR ========== */
 * {
     box-sizing: border-box;
 }
 
-/* =========== BODY =========== */
-html,
-body {
+html {
     width: 100%;
-    min-height: 100%;
     margin: 0;
     padding: 0;
 }
@@ -16,22 +14,28 @@ body {
     background-color: cadetblue;
     font-family: Arial, sans-serif;
     color: #000000;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
 }
 
-/* =========== CONTAINER =========== */
+/* ========== CONTAINER WEBSITE ========== */
 .container {
-    width: 100%;
-    max-width: none;
+    width: 90%;
+    max-width: 1500px;
     min-height: 100vh;
-    margin: 0;
-    padding: 30px;
+    margin: 25px auto;
+    padding: 35px;
     background-color: white;
 }
 
+/* ========== JUDUL ========== */
 h1 {
     color: darkblue;
     text-align: center;
+    margin-top: 20px;
     margin-bottom: 20px;
+    font-size: 32px;
 }
 
 h2 {
@@ -46,38 +50,45 @@ p {
     text-align: justify;
 }
 
-/* =========== IDENTITAS =========== */
+/* ========== IDENTITAS DIRI ========== */
 .identitas {
     width: 60%;
+    border-collapse: collapse;
 }
 
-/* =========== KOLOM FOTO =========== */
 .kolom-foto {
     vertical-align: top;
     padding-right: 30px;
 }
 
-/* =========== KOLOM IDENTITAS =========== */
 .kolom-identitas {
     vertical-align: top;
 }
 
-/* =========== FOTO PROFIL =========== */
+/* ========== FOTO PROFIL ========== */
 .foto-profil {
     width: 201px;
     max-width: 100%;
     height: auto;
     border: 3px solid white;
     padding: 5px;
+    object-fit: cover;
 }
 
-/* =========== DATA IDENTITAS =========== */
+/* ========== DATA IDENTITAS ========== */
+.Data-identitas,
+.data-identitas {
+    max-width: 100%;
+    border-collapse: collapse;
+}
+
 .Data-identitas td,
 .data-identitas td {
     padding: 5px;
+    vertical-align: top;
 }
 
-/* =========== TABEL MATA KULIAH =========== */
+/* ========== TABEL MATA KULIAH ========== */
 .tabel-matakuliah {
     width: 100%;
     border-collapse: collapse;
@@ -90,6 +101,7 @@ p {
     color: white;
     padding: 10px;
     border: 1px solid #cccccc;
+    text-align: left;
 }
 
 .tabel-matakuliah td {
@@ -97,7 +109,15 @@ p {
     border: 1px solid #cccccc;
 }
 
-/* =========== LINK =========== */
+.tabel-matakuliah tbody tr:nth-child(even) {
+    background-color: #f1f5f9;
+}
+
+.tabel-matakuliah tbody tr:hover {
+    background-color: #e0f2fe;
+}
+
+/* ========== LINK ========== */
 a {
     color: #0066cc;
     text-decoration: none;
@@ -108,7 +128,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* =========== FORM =========== */
+/* ========== FORMULIR ========== */
 form {
     background-color: #f1f5f9;
     padding: 20px;
@@ -125,9 +145,12 @@ label {
 input,
 select,
 textarea {
+    display: block;
     width: 100%;
     padding: 10px;
+    margin-bottom: 15px;
     border: 1px solid #cccccc;
+    font-family: Arial, sans-serif;
 }
 
 textarea {
@@ -147,14 +170,7 @@ button:hover {
     background-color: #003366;
 }
 
-/* =========== FOOTER =========== */
-.footer {
-    text-align: center;
-    color: #666666;
-    margin-top: 30px;
-}
-
-/* =========== GRID INFORMASI =========== */
+/* ========== GRID INFORMASI ========== */
 .grid-informasi {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -163,26 +179,29 @@ button:hover {
     margin-bottom: 25px;
 }
 
-/* =========== CARD =========== */
+/* ========== CARD ========== */
 .card {
     background-color: cadetblue;
     padding: 20px;
     border: 1px solid #dddddd;
-    min-width: 0;
+    overflow-wrap: anywhere;
 }
 
-/* =========== TABLET DAN HP =========== */
-@media screen and (max-width: 768px) {
+/* ========== FOOTER ========== */
+.footer {
+    text-align: center;
+    color: #666666;
+    margin-top: 30px;
+    padding: 15px 0;
+}
 
-    body {
-        padding: 0;
-    }
-
+/* ========== RESPONSIF TABLET DAN HP ========== */
+@media (max-width: 768px) {
     .container {
-        width: 100%;
+        width: 96%;
         max-width: none;
         min-height: 100vh;
-        margin: 0;
+        margin: 10px auto;
         padding: 15px;
     }
 
@@ -218,7 +237,6 @@ button:hover {
 
     .kolom-identitas {
         width: 100%;
-        padding-right: 0;
     }
 
     .kolom-identitas h2 {
@@ -233,14 +251,14 @@ button:hover {
     /* DATA IDENTITAS */
     .Data-identitas,
     .data-identitas {
-        max-width: 100%;
+        width: 100%;
+        font-size: 13px;
     }
 
     .Data-identitas td,
     .data-identitas td {
         padding: 4px 2px;
-        font-size: 13px;
-        vertical-align: top;
+        overflow-wrap: anywhere;
     }
 
     /* GRID INFORMASI */
@@ -261,11 +279,11 @@ button:hover {
 
     .tabel-matakuliah th,
     .tabel-matakuliah td {
-        padding: 6px 4px;
+        padding: 6px;
         overflow-wrap: anywhere;
     }
 
-    /* FORM */
+    /* FORMULIR */
     form {
         padding: 15px;
     }
@@ -274,12 +292,51 @@ button:hover {
     select,
     textarea {
         font-size: 14px;
-        max-width: 100%;
     }
 
     button {
         width: 100%;
         margin-right: 0;
         margin-bottom: 10px;
+    }
+
+    .footer {
+        font-size: 13px;
+    }
+
+    /* kalimat terkhir */
+     p {
+        font-size: 14px;
+        line-height: 1.6;
+        }
+}
+
+/* ========== RESPONSIF HP KECIL ========== */
+@media (max-width: 480px) {
+    .container {
+        width: 96%;
+        margin: 8px auto;
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 21px;
+    }
+
+    h2 {
+        font-size: 17px;
+    }
+
+    .foto-profil {
+        width: 110px;
+    }
+
+    .tabel-matakuliah {
+        font-size: 11px;
+    }
+
+    .tabel-matakuliah th,
+    .tabel-matakuliah td {
+        padding: 5px;
     }
 }
